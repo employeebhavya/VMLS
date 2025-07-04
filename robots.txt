@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /index.html
+Disallow: /menu.html
+Disallow: /footer.html
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /scripts/
+Allow: /public/
+Sitemap: https://vmls.edu.in/sitemap.xml

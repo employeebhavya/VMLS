@@ -1,0 +1,327 @@
+p {
+  line-height: 1.3;
+}
+.academics {
+  min-width: 200%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 6vw;
+  column-gap: 3vw;
+  padding-top: 2vh;
+  padding-right: 3vw;
+}
+.acad-rajkumar {
+  width: 400%;
+  min-width: 400%;
+}
+.acad-julian {
+  min-width: 300%;
+}
+.about-vmrf {
+  width: 200%;
+  padding-left: 0;
+}
+.about-vmrf .acdemics-sec-1 > div:nth-child(1) {
+  margin-right: 3vw;
+  width: 40%;
+}
+.about-vmrf .acdemics-sec-1 > div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.acad-dean {
+  width: 200% !important;
+}
+.academics.acad-single {
+  width: 100%;
+  min-width: 100%;
+  padding-right: 8vw;
+}
+.acdemics-sec-1 {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.acdemics-sec-1 > div:nth-child(1) {
+  width: 30%;
+  height: 100%;
+}
+.acdemics-sec-1 > div:nth-child(1) img {
+  width: 90%;
+  height: auto;
+  margin-bottom: 2vh;
+}
+
+.acdemics-sec-1 > div:nth-child(2) {
+  width: 70%;
+}
+.acdemics-sec-1 > div:nth-child(1) h3 {
+  font-size: 2vw;
+  font-weight: normal;
+  margin-bottom: 1vh;
+  color: #000;
+}
+.acdemics-sec-1 > div:nth-child(1) p {
+  font-size: 1vw;
+  font-weight: normal;
+  color: #000;
+  width: 90%;
+}
+.acdemics-sec-1 > div:nth-child(1) p:not(:last-child) {
+  margin-bottom: 1vh;
+}
+
+.float-row p {
+  font-size: 1.1vw;
+  font-weight: normal;
+  text-align: justify;
+  margin-bottom: 3vh;
+}
+/* section-2 */
+.acad-section-2,
+.acad-section-3,
+.acad-section-4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  column-gap: 2vw;
+  align-content: start;
+}
+.acad-section-2 > div:nth-child(1),
+.acad-section-3 > div:nth-child(1),
+.acad-section-4 > div:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 3vh;
+  text-align: justify;
+  padding: 0 3vw;
+}
+.acad-section-2 > div:nth-child(2),
+.acad-section-3 > div:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 3vh;
+  text-align: justify;
+}
+.acad-section-2 ul {
+  padding-left: 20px;
+}
+.acad-section-2 > div > div {
+  display: flex;
+  width: 100%;
+  column-gap: 2vw;
+}
+.acad-section-2 > div > div h3 {
+  font-size: 2vw;
+  margin-bottom: 1vh;
+}
+.acad-section-2 > div > div p {
+  font-size: 1vw;
+  font-weight: normal;
+}
+.acad-section-2 p {
+  font-weight: normal !important;
+}
+.dr-francis {
+  row-gap: 1.5vh !important;
+}
+.float-row h4,
+.dr-francis h4 {
+  margin-bottom: 12px;
+  font-size: 1.5vw;
+}
+.float-row ul,
+.dr-francis ul {
+  margin-bottom: 12px;
+  padding-left: 1.1vw;
+}
+.float-row li,
+.dr-francis li {
+  font-weight: normal;
+  margin-bottom: 3px;
+}
+
+.sectionmobile {
+  display: none;
+}
+@media only screen and (min-width: 1101px) {
+  .acad-julian .acdemics-sec-1 {
+    padding-right: 16vw;
+  }
+  .academics.acad-rajkumar .acdemics-sec-1 {
+    padding-right: 22vw;
+  }
+  .academics.acad-dean .acdemics-sec-1 {
+    padding-right: 11vw;
+  }
+  .academics.about-vmrf .acdemics-sec-1 {
+    padding-right: 6vw;
+  }
+  .academics.about-vmrf .acad-section-2 {
+    padding: 0 2vw;
+  }
+  .academics p,
+  .academics li {
+    font-size: 1vw;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #section-2 {
+    display: none !important;
+  }
+  .float-row h4,
+  .dr-francis h4 {
+    font-size: 18px !important;
+  }
+  .sectionmobile {
+    display: block !important;
+  }
+  .landing {
+    height: auto !important;
+  }
+  .float-row h4 {
+    font-size: 18px !important;
+  }
+  .float-row li,
+  .dr-francis li {
+    font-size: 13px !important;
+  }
+  .acad-section-2 > div:nth-child(1),
+  .acad-section-3 > div:nth-child(1),
+  .acad-section-4 > div:nth-child(1) {
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .mobile-panel {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 25px;
+  }
+  .float-row {
+    padding-top: 15px !important;
+  }
+  .academics,
+  .acdemics-sec-1,
+  .acad-section-2,
+  .acad-sec-3 {
+    display: block !important;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .float-row {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+  .menu-main-right {
+    display: none !important;
+  }
+  .menu-main-left {
+    width: 68vw !important;
+  }
+
+  .menu-top h3 {
+    font-size: 6vw !important;
+    margin-bottom: 2vh;
+  }
+  .menu-top a {
+    font-size: 4vw !important;
+  }
+  .menu-top2 a {
+    font-size: 5.8vw !important;
+  }
+  .menu-top {
+    height: auto !important;
+  }
+  .menu-top2 {
+    height: auto;
+  }
+  .menu-arrow-img {
+    top: 6vh !important;
+    left: 23vw !important;
+  }
+  .menu-arrow-img img {
+    width: 50vw !important;
+  }
+  .close-btn {
+    top: 3vh;
+    right: 7vw;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 1vh 4vw;
+  }
+  .close-btn img {
+    width: 2vw !important;
+  }
+  .academics {
+    padding: 35px 20px !important;
+  }
+  .header-main {
+    z-index: 1 !important;
+  }
+  .header .header-img-01 {
+    width: 50vw !important;
+  }
+  .header-img-02 {
+    width: 20vw !important;
+  }
+  .topbar p {
+    font-size: 3vw !important;
+  }
+  .acdemics-sec-1 > div:nth-child(1),
+  .acdemics-sec-1 > div:nth-child(2),
+  .acdemics-sec-1 > div:nth-child(3),
+  .acad-section-2 > div:nth-child(1) {
+    width: 100% !important;
+  }
+  .float-row {
+    width: 95vw !important;
+  }
+  .acdemics-sec-1 > div:nth-child(3) h3,
+  .acad-section-2 > div > div h3 {
+    font-size: 6vw !important;
+  }
+  .float-row h3,
+  .column-r2 h3 {
+    font-size: 5vw !important;
+  }
+  .float-row p {
+    font-size: 16px !important;
+  }
+
+  .acad-section-2 > div:nth-child(2) {
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+  .acdemics-sec-1 > div:nth-child(1) h3 {
+    font-size: 25px !important;
+  }
+  .acdemics-sec-1 > div:nth-child(1) p {
+    font-size: 14px !important;
+  }
+  .float-row p {
+    margin-bottom: 2vh;
+  }
+  .acdemics-sec-1 > div:nth-child(1) img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+  .landing {
+    height: auto !important;
+  }
+}

@@ -1,0 +1,122 @@
+.board-of-advisors {
+  width: 168%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.board-of-advisors > .row {
+  width: calc(168% / 6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+  padding: 2vw;
+}
+.board-of-advisors .row .img {
+  width: 100%;
+  height: 77%;
+  margin-bottom: 2vh;
+}
+.board-of-advisors .row:nth-child(2) .content,
+.board-of-advisors .row:nth-child(3) .content,
+.board-of-advisors .row:nth-child(6) .content {
+  color: #fff;
+}
+.board-of-advisors .row a {
+  height: 100%;
+  color: initial;
+}
+.board-of-advisors .row .content {
+  width: 100%;
+  height: 20%;
+}
+.board-of-advisors .row .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.board-of-advisors .row h3 {
+  font-size: 1.5vw;
+  font-weight: normal;
+  margin-bottom: 1vh;
+}
+.board-of-advisors .row p {
+  font-size: 1vw;
+  font-weight: normal;
+  text-align: justify;
+}
+.board-of-advisors .row:nth-child(1) {
+  background-color: #ffe2a1;
+  color: #000;
+}
+.board-of-advisors .row:nth-child(2) {
+  background-color: #8e8e8e;
+  color: #ffffff;
+}
+.board-of-advisors .row:nth-child(3) {
+  background-color: #8c1515;
+  color: #ffffff;
+}
+.board-of-advisors .row:nth-child(4) {
+  background-color: #ffcb64;
+  color: #000;
+}
+.board-of-advisors .row:nth-child(5) {
+  background-color: #ffefd2;
+  color: #000;
+}
+.board-of-advisors .row:nth-child(6) {
+  background-color: #8c1515;
+  color: #ffffff;
+}
+.mobile-section {
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .section.horizontal {
+    display: none !important;
+  }
+  .mobile-section {
+    display: block !important;
+  }
+  .header-main {
+    position: relative !important;
+    width: 100%;
+    z-index: 1;
+  }
+  .topbar {
+    height: 40px !important;
+  }
+  .header {
+    height: 60px !important;
+  }
+  .landing {
+    height: auto !important;
+  }
+  .header .header-img-01 {
+    width: 40vw !important;
+  }
+  .header-img-02 {
+    width: 24vw !important;
+  }
+  .topbar p {
+    font-size: 3vw !important;
+  }
+  .board-of-advisors {
+    width: 100% !important;
+    padding: 10px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .board-of-advisors > .row {
+    width: 100% !important;
+    row-gap: 1vh !important;
+    padding-bottom: 10vw !important;
+  }
+  .board-of-advisors .row h3 {
+    font-size: 4vw !important;
+  }
+  .board-of-advisors .row p {
+    font-size: 2vw !important;
+  }
+}

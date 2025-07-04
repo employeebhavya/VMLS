@@ -1,0 +1,96 @@
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Exclude images, CSS, and JavaScript files from redirection
+  RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|css|js)$ [NC]
+
+  # Begin 301 Redirects
+  RewriteRule ^programmes-offered/?$ /academics.html [R=301,L]
+  RewriteRule ^admissions/?$ /how-to-apply.html [R=301,L]
+  RewriteRule ^faculty/?$ /faculty.html [R=301,L]
+  RewriteRule ^apply-now/?$ /how-to-apply.html [R=301,L]
+  RewriteRule ^campus-facilities/?$ / [R=301,L]
+  RewriteRule ^chancellor-profile/?$ / [R=301,L]
+  RewriteRule ^dr-justice-p-jyothimani/?$ / [R=301,L]
+  RewriteRule ^dr-pandiaraj/?$ / [R=301,L]
+  RewriteRule ^dr-sathish/?$ / [R=301,L]
+  RewriteRule ^founder-profile/?$ / [R=301,L]
+  RewriteRule ^hema-barthi.html/?$ / [R=301,L]
+  RewriteRule ^joint-implementation-committee/?$ / [R=301,L]
+  RewriteRule ^contact/?$ https://vmls.edu.in/Contact-Us.html [R=301,L]
+  RewriteRule ^lp/?$ / [R=301,L]
+  RewriteRule ^mr-antony-r-julian/?$ /Dr.A.Francis-Julian.html [R=301,L]
+  RewriteRule ^mr-c-jayaraj/?$ / [R=301,L]
+  RewriteRule ^mr-edhaya-chandran/?$ /Mr.Edhaya-Chandran.html [R=301,L]
+  RewriteRule ^mr-krishna-kishore-padala/?$ /Mr.Krishna-Kishore-Padala.html [R=301,L]
+  RewriteRule ^mr-nishant-sheokand/?$ /Mr.Nishant-Sheokand.html [R=301,L]
+  RewriteRule ^mr-s-pavendhan/?$ / [R=301,L]
+  RewriteRule ^mr-s-suresh-samuel/?$ /Mr.J.Suresh-Samuel.html [R=301,L]
+  RewriteRule ^mr-vivek-dhokalia/?$ /Mr.Vivek-Dhokalia.html [R=301,L]
+  RewriteRule ^ms-aarthy-g/?$ / [R=301,L]
+  RewriteRule ^ms-chesha-p-chellappan/?$ /Ms.Chesha-P.Chellappan.html [R=301,L]
+  RewriteRule ^ms-gnana-sanga-mithra-s/?$ /Dr.Gnana-Sanga-Mithra-S.html [R=301,L]
+  RewriteRule ^ms-nanthini-r-o/?$ / [R=301,L]
+  RewriteRule ^ms-spuruthi-krishna/?$ /Mr.Krishna-Kishore-Padala.html [R=301,L]
+  RewriteRule ^ms-suhasini-rao/?$ / [R=301,L]
+  RewriteRule ^recent-events/?$ /news-and-events.html [R=301,L]
+  RewriteRule ^research-centres/?$ / [R=301,L]
+  RewriteRule ^strategic-advisory-committee/?$ / [R=301,L]
+  RewriteRule ^dr-m-saravanan/?$ /Mr.Saravanan-R.html [R=301,L]
+  # End 301 Redirects
+</IfModule>
+
+# Enable Gzip Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Enable Brotli Compression (if supported)
+<IfModule mod_brotli.c>
+  BrotliCompressionQuality 5
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Enable Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 day"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Enable Keep-Alive
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+</IfModule>
+
+# Minify HTML, CSS, and JS
+<IfModule mod_filter.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>
+
+# Optimize Apache Handling for PHP
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Load CSS asynchronously
+  <FilesMatch "\.(css)$">
+    Header set Link "<%{REQUEST_URI}e>; rel=preload; as=style"
+  </FilesMatch>
+
+  # Defer JavaScript
+  <FilesMatch "\.(js)$">
+    Header set Link "<%{REQUEST_URI}e>; rel=preload; as=script"
+  </FilesMatch>
+</IfModule>

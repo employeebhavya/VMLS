@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <!-- Meta Title -->
+    <meta name="robots" content="index, follow, noodp, noydir" />
+    <title>chat-with-a-student</title>
+
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/menu.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/dropdown.css" />
+    <link rel="stylesheet" href="./styles/coj.css" />
+    <link rel="stylesheet" href="./styles/news.css" />
+    <link rel="stylesheet" href="./styles/footerresponsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Imperator%3A400"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      iframe {
+        width: 1px;
+        min-width: 100%;
+        position: relative;
+        min-height: 100vh;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body>
+    <div class="landing" id="coj-landing">
+      <!-- menu-starts-here -->
+      <div class="menu" id="menu-content"></div>
+      <!-- menu-ends-here -->
+      <!-- header-starts-here -->
+      <div id="vmls-header"></div>
+      <!-- header-ends-here -->
+    </div>
+    <section style="min-height: 100vh">
+      <iframe
+        id="Univiser"
+        src="https://vmls.univiser.io/?wordpress=true"
+        frameborder="0"
+      ></iframe>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="footer"></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/iframe
+resizer@3.6.5/js/iframeResizer.min.js"></script>
+
+    <script>
+      iFrameResize(
+        {
+          enablePublicMethods: true,
+          heightCalculationMethod: "lowestElement",
+        },
+        "#Univiser"
+      );
+    </script>
+
+    <script>
+      window.addEventListener("message", function (event) {
+        if (event?.data?.type === "SCROLL_PARENT_TO_TOP") {
+          document
+            .getElementById("Univiser")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    </script>
+    <!-- scripts -->
+    <script src="./script/menu.js"></script>
+    <script src="./script/dropdown.js"></script>
+    <script src="./script/footer.js"></script>
+  </body>
+</html>

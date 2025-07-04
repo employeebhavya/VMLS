@@ -1,0 +1,197 @@
+.scholarships {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 2vw;
+
+  padding-left: 6vw;
+}
+.scholarships .row {
+  width: 50%;
+  height: 100%;
+}
+.scholarships .row h3 {
+  font-size: 2vw;
+  font-weight: normal;
+  margin-top: 2vw;
+}
+.scholarships .row li {
+  font-size: 1vw;
+  font-weight: normal;
+}
+.scholar-image {
+  width: 100%;
+  height: 70%;
+}
+.scholar-image img {
+  width: 70%;
+  height: 100%;
+  object-fit: contain;
+}
+.scholarships .row:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* contact-us-page */
+.contact-us-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  column-gap: 3vw;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+.contact-us-page .row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vw;
+  height: 100%;
+}
+.contact-us-page .row:nth-child(1) {
+  width: 30%;
+  row-gap: 3vw;
+}
+.contact-us-page .row:nth-child(2) {
+  width: 70%;
+}
+.contact-us-page .row .content h3 {
+  font-size: 1.5vw;
+  font-weight: normal;
+  margin-bottom: 2vh;
+}
+.contact-us-page .row .content p {
+  font-size: 1.2vw;
+  font-weight: normal;
+}
+.contact-us-page .row .form-group input,
+.contact-us-page .row .form-group select {
+  padding: 7px;
+  font-size: 10px;
+}
+.contact-us-page .row .form-group {
+  margin-bottom: 7px;
+}
+.contact-us-page #row-2 .column:nth-child(1) {
+  display: flex;
+  width: 100%;
+  column-gap: 1vw;
+  height: 50%;
+}
+.contact-us-page #row-2 .column:nth-child(1) .innercolumn {
+  width: 50%;
+  height: 100%;
+}
+.contact-us-page #row-2 .column:nth-child(1) .innercolumn h3 {
+  font-size: 1.2vw;
+  color: white;
+  margin-bottom: 1vh;
+}
+.contact-us-page #row-2 .column:nth-child(1) .innercolumn:nth-child(1) {
+  background-color: #661414;
+  padding: 1vw;
+}
+.contact-us-page #row-2 .column:nth-child(1) .innercolumn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contact-us-page #row-2 .column:nth-child(2) {
+  width: 100%;
+  height: 43%;
+}
+.videoSchlorshipPage {
+  position: relative;
+  margin: 0 6vw;
+  padding-top: clamp(20px, 5vh, 5vh);
+  padding-bottom: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2vw;
+}
+.videoSchlorshipPage-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(15px, 1.5vh, 1.5vh);
+}
+.videoSchlorshipPage-column h3 {
+  font-size: clamp(22px, 1.7vw, 1.7vw);
+  font-weight: 500;
+}
+.videoSchlorshipPage-column h4 {
+  font-size: clamp(17px, 1.2vw, 1.2vw);
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--color-brown);
+}
+.videoSchlorshipPage-column p {
+  font-size: clamp(15px, 1vw, 1vw);
+  font-weight: 400;
+}
+@media only screen and (max-width: 1100px) {
+  .scholarships,
+  .contact-us-page {
+    padding: 20px;
+    flex-direction: column;
+    row-gap: 20px;
+    height: auto !important;
+  }
+  .scholarships .row {
+    width: 100%;
+  }
+  .scholar-image img {
+    width: 100%;
+  }
+  .landing {
+    height: auto !important;
+  }
+  .scholarships .row h3 {
+    font-size: 4vw;
+  }
+  .scholarships .row li {
+    font-size: 2vw;
+  }
+
+  .scholar-image,
+  .scholarships .row {
+    height: auto !important;
+  }
+  .contact-us-page .row .content h3 {
+    font-size: 20px;
+    margin-bottom: 1vh;
+    color: #661414;
+  }
+  .contact-us-page .row .content p {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .contact-us-page #row-2 .column:nth-child(1) .innercolumn h3 {
+    font-size: 3vw;
+  }
+  .contact-us-page .row:nth-child(1),
+  .contact-us-page .row:nth-child(2) {
+    width: 100%;
+  }
+  .contact-us-page #row-2 .column:nth-child(1) .innercolumn:nth-child(1) {
+    width: 100%;
+    padding: 2vw;
+  }
+  .contact-us-page #row-2 .column:nth-child(1) .innercolumn:nth-child(2) {
+    display: none;
+  }
+  .scholarship-foot {
+    margin-top: 0;
+  }
+  .videoSchlorshipPage {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .videoSchlorshipPage-column {
+    width: 100%;
+  }
+}
